@@ -23,6 +23,7 @@ describe('App', () => {
   it('should have an `input` element', () => {
     expect(wrapper.containsMatchingElement(<input />)).toBe(true);
   });
+  
   describe('the user populates the input', () => {
     const item = 'Best text';
     beforeEach(() => {
