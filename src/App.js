@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [inputText, setInputText] = useState('');
+  const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
 
   const handleFormSubmit = e => {
@@ -10,7 +10,7 @@ function App() {
     setItems(prevState => {
       return [...prevState, inputText];
     });
-    setInputText('');
+    setInputText("");
   };
   return (
     <div className='App'>
@@ -29,8 +29,8 @@ function App() {
       <table>
         <th>Items</th>
         <tr>
-          {items.map(item => (
-            <td>{item}</td>
+          {items.map((item, i) => (
+            <td key={i}>{item}</td>
           ))}
         </tr>
       </table>
