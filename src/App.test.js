@@ -10,6 +10,7 @@ describe("App", () => {
   beforeEach(() => {
     wrapper = shallow(<App />);
   });
+  
   it('should have the `th` "items"', () => {
     expect(wrapper.contains(<th>Items</th>)).toBe(true);
   });
