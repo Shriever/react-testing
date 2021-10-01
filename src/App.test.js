@@ -33,10 +33,12 @@ describe("App", () => {
         target: { value: item },
       });
     });
+
     it("should change input value", () => {
       const input = wrapper.find("input").first();
       expect(input.props().value).toEqual(item);
     });
+    
     it("should enable `button`", () => {
       const button = wrapper.find("button").first();
       expect(button.props().disabled).toBe(false);
