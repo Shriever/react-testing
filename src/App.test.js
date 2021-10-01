@@ -38,11 +38,12 @@ describe("App", () => {
       const input = wrapper.find("input").first();
       expect(input.props().value).toEqual(item);
     });
-    
+
     it("should enable `button`", () => {
       const button = wrapper.find("button").first();
       expect(button.props().disabled).toBe(false);
     });
+
     describe("and then clears the input", () => {
       beforeEach(() => {
         const input = wrapper.find("input").first();
@@ -50,10 +51,12 @@ describe("App", () => {
           target: { value: "" },
         });
       });
+
       it("should clear `input` value", () => {
         const input = wrapper.find("input").first();
         expect(input.props().value).toEqual("");
       });
+
       it("should disable the `button`", () => {
         const button = wrapper.find("button").first();
         expect(button.props().disabled).toBe(true);
