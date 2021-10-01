@@ -67,17 +67,21 @@ describe("App", () => {
         const form = wrapper.find("form").first();
         form.simulate("submit", { preventDefault: () => {} });
       });
+
       it("should clear `input` value", () => {
         const input = wrapper.find("input").first();
         expect(input.props().value).toEqual("");
       });
+
       it("should disable the `button`", () => {
         const button = wrapper.find("button").first();
         expect(button.props().disabled).toBe(true);
       });
+      
       it("should create a new `td` element", () => {
         expect(wrapper.containsMatchingElement(<td>{item}</td>)).toBe(true)
       });
+
       it("`td` should have the same value that was submitted", () => {
         const td = wrapper.find("td").first();
         expect(td.props().children).toEqual(item);
