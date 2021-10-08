@@ -1,12 +1,12 @@
 const add = (a, b) => {
-    return a + b;
-  };
+  return a + b;
+};
+
+const subtract = (a, b) => {
+  return a - b;
+};
   
-  const subtract = (a, b) => {
-    return a - b;
-  };
+const modash = { add, subtract };
   
-  const modash = { add, subtract };
-  
-  export default modash;
+export default modash;
   
